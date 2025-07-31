@@ -1,0 +1,55 @@
+# ========================
+# SYSTEM/OS RELATED
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# PHP / Composer
+# ========================
+vendor/
+composer.lock
+composer.phar
+
+# ========================
+# ENV / KONFIGURASI SENSITIF
+# ========================
+.env
+.env.*
+config.php  # kalau kamu simpan kredensial database di file ini
+
+# ========================
+# LOG / CACHE / SESSION / DEBUG FILES
+# ========================
+*.log
+*.bak
+*.tmp
+*.cache
+*.swp
+*.swo
+*.sqlite
+
+# ========================
+# ARTIFACTS / FILE YANG DIBUAT USER / OUTPUT
+# ========================
+/cetak_struk.php
+*.pdf
+*.xlsx
+*.xls
+*.csv
+
+# ========================
+# FILE & FOLDER YANG BIKIN BERAT
+# ========================
+node_modules/
+*.zip
+*.rar
+
+# ========================
+# BACKUP FILES
+# ========================
+*.old
+*.orig
+*.save
+*~ 
