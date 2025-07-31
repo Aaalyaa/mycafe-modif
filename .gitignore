@@ -45,6 +45,7 @@ config.php  # kalau kamu simpan kredensial database di file ini
 node_modules/
 *.zip
 *.rar
+*.txt
 
 # ========================
 # BACKUP FILES
