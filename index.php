@@ -135,7 +135,7 @@ switch ($page) {
     case 'lihat-laporan':
         require_once 'controllers/laporan-controller.php';
         LaporanController::getLaporan();
-        break;~
+        break;
 
     case 'detail-owner':
         require 'views/owner/detail-transaksi-owner.php';
