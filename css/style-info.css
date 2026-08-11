@@ -1,0 +1,125 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ceb290;
+}
+
+.wrapper-center {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar-custom {
+  background-color: #ab7843;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar-left {
+  font-weight: 500;
+  color: #eff0eb;
+}
+
+.navbar-right .btn {
+  margin-left: 10px;
+}
+
+.btn-akun {
+  background-color: transparent;
+  border: 2px solid #eff0eb;
+  color: #eff0eb;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-akun:hover {
+  background-color: #63492d;
+  color: white;
+}
+
+.btn-logout {
+  background-color: #22140b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-logout:hover {
+  background-color: #502f1b;
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+  .navbar-left,
+  .navbar-right {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #966548;
+  color: white;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+.card-body {
+  padding: 30px;
+  background-color: #b9966e;
+}
+
+.btn-back,
+.btn-edit {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font: 1em sans-serif;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-edit {
+  background-color: #65493b;
+  color: white;
+  border: none;
+}
+
+.btn-edit:hover {
+  background-color: #553827;
+  color: white;
+}
+
+.btn-back {
+  background-color: #966548;
+  color: white;
+  border: none;
+}
+
+.btn-back:hover {
+  background-color: #553827;
+  color: white;
+}

@@ -1,0 +1,266 @@
+body {
+  background-color: #ceb290;
+}
+
+.navbar-custom {
+  background-color: #ab7843;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar-left {
+  font-weight: 500;
+  color: #eff0eb;
+}
+
+.navbar-right .btn {
+  margin-left: 10px;
+}
+
+.btn-logout {
+  background-color: #22140b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-logout:hover {
+  background-color: #502f1b;
+  color: white;
+}
+
+.btn-logout:focus,
+.btn-logout:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 768px) {
+
+  .navbar-left,
+  .navbar-right {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #3a2419;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.btn-kembali {
+  background-color: #6d3914;
+  color: #eff0eb;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-kembali:hover {
+  background-color: #5b3e2e;
+  color: white;
+}
+
+.btn-arsip {
+  background-color: #966548;
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-arsip:hover {
+  background-color: #63492d;
+  color: white;
+}
+
+.btn-tambah {
+  background-color: #a75d2a;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-tambah:hover {
+  background-color: #7c3e17;
+  color: white;
+}
+
+.filter-form {
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+.filter-form label {
+  font-weight: 500;
+  color: #eff0eb;
+}
+
+.filter-form select,
+.filter-form input[type="date"] {
+  max-width: 180px;
+  font-weight: 500;
+  background-color: #eff0eb;
+  border-radius: 6px;
+  border: 1px solid #eff0eb;
+  padding: 6px 10px;
+}
+
+.filter-form .btn {
+  padding: 6px 16px;
+  font-weight: 500;
+}
+
+.btn-filter {
+  background-color: #c47b42;
+  border-color: #eff0eb;
+  color: #eff0eb;
+  border-radius: 6px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-filter:hover {
+  background-color: #7c4d29;
+  border-color: #eff0eb;
+  color: #eff0eb;
+}
+
+.btn-reset {
+  background-color: #823919;
+  border-color: #eff0eb;
+  color: #eff0eb;
+  border-radius: 6px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reset:hover {
+  background-color: #522410;
+  border-color: #eff0eb;
+  color: #eff0eb;
+}
+
+.table {
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+  background-color: #966548;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table tbody tr {
+  background-color: #b9966e;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  color: #000000;
+}
+
+.table td,
+.table th {
+  padding: 14px 20px;
+  vertical-align: middle;
+  font-size: 0.95rem;
+  border-color: #eff0eb;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #eff0eb;
+  transition: 0.3s ease;
+}
+
+.btn-action {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons .btn {
+  padding: 5px 12px;
+  font-size: 14px;
+}
+
+.btn-detail {
+  background-color: #532c14;
+  color: #ffffff;
+  border: none;
+  padding: 6px 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-detail:hover {
+  background-color: #22140b;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-edit {
+  background-color: #4c2b08;
+  color: #eff0eb;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+  background-color: #3a1f0b;
+  color: white;
+}
+
+.btn-status {
+  background-color: #8b3a2c;
+  color: #eff0eb;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-status:hover {
+  background-color: #6d2a1f;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .col-md-4.text-right {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+}

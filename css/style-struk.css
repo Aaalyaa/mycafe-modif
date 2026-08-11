@@ -1,0 +1,38 @@
+body {
+    font-family: monospace;
+    margin: 20px;
+}
+
+.struk-container {
+    width: 300px;
+    margin: auto;
+}
+
+h2,
+p,
+table {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    font-size: 12px;
+    padding: 5px;
+    border-bottom: 1px dashed #000;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+}

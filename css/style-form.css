@@ -1,0 +1,146 @@
+body {
+  background-color: #6d3914;
+}
+
+.navbar-custom {
+  background-color: #ab7843;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar-left {
+  font-weight: 500;
+  color: #eff0eb;
+}
+
+.navbar-right .btn {
+  margin-left: 10px;
+}
+
+.btn-logout {
+  background-color: #22140b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-logout:hover {
+  background-color: #502f1b;
+  color: white;
+}
+
+.btn-logout:focus,
+.btn-logout:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 768px) {
+
+  .navbar-left,
+  .navbar-right {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.container {
+  background-color: #ceb290;
+  max-width: 800px;
+  border-radius: 12px;
+  padding: 40px 30px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #341f1a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 16px;
+  background-color: #6d3914;
+  color: #eff0eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  background-color: #502f1b;
+  color: #eff0eb;
+}
+
+.form {
+  text-align: center;
+}
+
+.form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form label {
+  font-weight: 600;
+  color: #341f1a;
+}
+
+.form-control {
+  max-width: 600px; 
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 6px 10px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  border-color: #a75d2a;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+select.form-control {
+  appearance: none; 
+  background-color: #fff; 
+}
+
+select.form-control option {
+  background-color: #fff; 
+  color: #000; 
+}
+
+.btn-submit {
+  background-color: #3d251e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #6e3a2f;
+  color: #ffffff;
+}

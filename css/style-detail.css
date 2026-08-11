@@ -1,0 +1,189 @@
+body {
+  background-color: #b8957f;
+}
+
+.navbar-custom {
+  background-color: #ab7843;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar-left {
+  font-weight: 500;
+  color: #eff0eb;
+}
+
+.navbar-right .btn {
+  margin-left: 10px;
+}
+
+.btn-akun {
+  background-color: transparent;
+  border: 2px solid #eff0eb;
+  color: #eff0eb;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-akun:hover {
+  background-color: #63492d;
+  color: white;
+}
+
+.btn-logout {
+  background-color: #22140b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-logout:hover {
+  background-color: #502f1b;
+  color: white;
+}
+
+.btn-logout:focus,
+.btn-logout:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 768px) {
+
+  .navbar-left,
+  .navbar-right {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-kembali {
+  background-color: #5b3e2e;
+  color: #eff0eb;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-kembali:hover {
+  background-color: #3a2419;
+  color: white;
+}
+
+.btn-struk {
+  background-color: #a75d2a;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-struk:hover {
+  background-color: #7c3e17;
+  color: white;
+}
+
+.btn-new {
+  background-color: #7a4c2e;
+  color: #eff0eb;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-new:hover {
+  background-color: #4d2f1c;
+  color: white;
+}
+
+.btn-new:focus,
+.btn-new:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.card-transaksi-header {
+  background-color: #eff0eb;
+  border: 2px solid #cfa87d;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-transaksi-header .card-body {
+  background-color: #eff0eb;
+  padding: 20px 24px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #3b2e2a;
+}
+
+.card-transaksi-header h5 {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #7a4c2e;
+}
+
+.card-transaksi-header p {
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.table {
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+  background-color: #966548;
+  color: #eff0eb;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.table tbody tr {
+  background-color: #cfa87d;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  color: #000000;
+  text-align: center;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #ded0bb ; 
+}
+
+.table td,
+.table th {
+  padding: 14px 20px;
+  vertical-align: middle;
+  font-size: 0.95rem;
+  border-color: #eff0eb;
+}

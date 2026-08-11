@@ -1,0 +1,237 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #90604c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 50px;
+}
+
+.navbar-custom {
+  background-color: #ab7843;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar-left {
+  font-weight: 500;
+  color: #eff0eb;
+  font-size: 1rem;
+}
+
+.navbar-right .btn {
+  margin-left: 10px;
+}
+
+.btn-out {
+  background-color: #63492d;
+  color: #eff0eb;
+  padding: 6px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-out:hover {
+  background-color: #502f1b;
+  color: white;
+}
+
+h4 {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  background-color: #b98e77;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-inline input[type="text"] {
+  max-width: 200px;
+  font-weight: 500;
+  background-color: #eff0eb;
+  border-radius: 6px;
+  border: 1px solid #eff0eb;
+  padding: 6px 10px;
+  box-shadow: 0px 2px 2px #3f1b0a;
+}
+
+.btn-cari {
+  background-color: #823219;
+  color: #eff0eb;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-cari:hover {
+  background-color: #521f10;
+  color: #eff0eb;
+}
+
+.btn-reset {
+  background-color: #6d3914;
+  color: #eff0eb;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-reset:hover {
+  background-color: #3f1b0a;
+  color: #eff0eb;
+}
+
+.table {
+  background-color: #fff;
+  margin-top: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #63492d;
+  color: #eff0eb;
+  text-align: center;
+}
+
+.table td {
+  background-color: #ab7843;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.btn-add {
+  background-color: #7e5439;
+  color: #eff0eb;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-add:hover {
+  background-color: #493121;
+  color: #eff0eb;
+}
+
+.btn-decrease {
+  background-color: #765431;
+  color: #eff0eb;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-decrease:hover {
+  background-color: #493121;
+  color: #eff0eb;
+}
+
+.btn-delete {
+  background-color: #5a3d2e;
+  color: #eff0eb;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-delete:hover {
+  background-color: #412116;
+  color: #eff0eb;
+}
+
+.form-bayar {
+  background-color: #b98e77;
+  padding: 20px;
+  margin: 30px 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-bayar .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.form-bayar input[type="number"] {
+  background-color: #eff0eb;
+  max-width: 200px;
+  font-weight: bold;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid #eff0eb;
+  padding: 6px 10px;
+  box-shadow: 0px 2px 2px #3f1b0a;
+}
+
+.form-bayar button {
+  min-width: 120px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.form-bayar button:hover {
+  transform: scale(1.02);
+}
+
+.btn-done {
+  background-color: #823219;
+  color: #eff0eb;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-done:hover {
+  background-color: #521f10;
+  color: #eff0eb;
+}
+
+@media (max-width: 768px) {
+  .navbar-custom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  .form-bayar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-bayar input,
+  .form-bayar button {
+    width: 100%;
+  }
+}
