@@ -24,6 +24,10 @@ switch ($page) {
         require 'views/owner/akun.php';
         break;
 
+    case 'kasir-akun':
+        require 'views/kasir/akun.php';
+        break;
+
     case 'edit-owner':
         require 'views/owner/edit/edit-owner.php';
         break;

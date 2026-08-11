@@ -1,6 +1,6 @@
 <?php
-require "config.php";
-require "auth.php";
+require "includes/config.php";
+require "includes/auth.php";
 $username = $_SESSION['username'] ?? 'Guest';
 $tanggal = date("l, d F Y");
 $adminQuery = "SELECT * FROM user WHERE username = '$username'";
@@ -25,7 +25,7 @@ $adminData = mysqli_fetch_assoc($adminResult);
             <?php echo $tanggal; ?>
         </div>
         <div class="navbar-right">
-            <a href="logout.php" class="btn btn-logout"
+            <a href="index.php?page=logout" class="btn btn-logout"
                 onclick="return confirm('Apakah kamu yakin ingin keluar dari website?')">Logout</a>
         </div>
     </nav>
@@ -41,7 +41,7 @@ $adminData = mysqli_fetch_assoc($adminResult);
                 <p><strong>Password:</strong> <?php echo $adminData['password']; ?></p>
 
                 <div class="text-center">
-                    <a href="homepage-kasir.php" class="btn btn-back">Kembali ke Beranda</a>
+                    <a href="index.php?page=dashboard-kasir" class="btn btn-back">Kembali ke Beranda</a>
                 </div>
             </div>
         </div>

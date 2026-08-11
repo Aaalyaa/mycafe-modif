@@ -34,7 +34,7 @@
             <?php echo $tanggal . " | " . $nama . " (" . $role . ")"; ?>
         </div>
         <div class="navbar-right">
-            <a href="kasir-akun.php" class="btn btn-akun">Lihat Informasi Akun</a>
+            <a href="index.php?page=kasir-akun" class="btn btn-akun">Lihat Informasi Akun</a>
             <a href="index.php?page=logout" class="btn btn-logout"
                 onclick="return confirm('Apakah kamu yakin ingin keluar dari website?')">Logout</a>
         </div>
