@@ -17,7 +17,8 @@ switch ($page) {
         break;
 
     case 'dashboard-kasir':
-        require 'views/kasir/dashboard.php';
+        require_once 'controllers/laporan-controller.php';
+        LaporanController::getHistoriKasir();
         break;
 
     case 'owner-akun':

@@ -22,4 +22,15 @@ class LaporanController
 
         include 'views/owner/laporan-transaksi.php';
     }
+
+    public static function getHistoriKasir()
+    {
+        $start_date = $_GET['start_date'] ?? null;
+        $end_date = $_GET['end_date'] ?? null;
+        $id_user = $_SESSION['id_user'] ?? null;
+
+        $result = LaporanModel::tampilLaporan($start_date, $end_date, $id_user);
+
+        include 'views/kasir/dashboard.php';
+    }
 }

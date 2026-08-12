@@ -1,5 +1,13 @@
+<?php
+include "includes/config.php";
+include "includes/auth.php";
+$username = $_SESSION['username'];
+$tanggal = date("l, d F Y");
+$role = $_SESSION['peran'] ?? 'User';
+?>
+
 <!DOCTYPE html>
-<html lang="id">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -11,27 +19,9 @@
 </head>
 
 <body>
-
-    <?php
-    include "includes/config.php";
-    include "includes/auth.php";
-    $tanggal = date("l, d F Y");
-    $nama = $_SESSION['username'] ?? 'Guest';
-    $role = $_SESSION['peran'] ?? 'User';
-    $where = "";
-
-    if (!empty($_GET['start_date']) && !empty($_GET['end_date'])) {
-        $start_date = $_GET['start_date'];
-        $end_date = $_GET['end_date'];
-        $where = "AND tgl_transaksi BETWEEN '$start_date' AND '$end_date'";
-    }
-
-    $sql = "SELECT * FROM data_transaksi WHERE id_user = '" . $_SESSION['id_user'] . "' $where ORDER BY tgl_transaksi DESC";
-    ?>
-
     <nav class="navbar navbar-custom d-flex justify-content-between align-items-center">
         <div class="navbar-left">
-            <?php echo $tanggal . " | " . $nama . " (" . $role . ")"; ?>
+            <?php echo $tanggal . " | " . $username . " (" . $role . ")"; ?>
         </div>
         <div class="navbar-right">
             <a href="index.php?page=kasir-akun" class="btn btn-akun">Lihat Informasi Akun</a>
@@ -48,26 +38,27 @@
         <div class="row mt-5 mb-1 align-items-center">
             <div class="col-md-8">
                 <form method="GET" class="form-row align-items-center filter-form">
+                    <input type="hidden" name="page" value="dashboard-kasir">
                     <div class="col-auto">
                         <label for="start_date" class="col-form-label">Dari:</label>
                     </div>
                     <div class="col-auto">
                         <input type="date" class="form-control" name="start_date"
-                            value="<?= $_GET['start_date'] ?? '' ?>">
+                            value="<?= $_GET['start_date'] ?? null ?>">
                     </div>
                     <div class="col-auto">
                         <label for="end_date" class="col-form-label">Sampai:</label>
                     </div>
                     <div class="col-auto">
-                        <input type="date" class="form-control" name="end_date" value="<?= $_GET['end_date'] ?? '' ?>">
+                        <input type="date" class="form-control" name="end_date" value="<?= $_GET['end_date'] ?? null ?>">
                     </div>
                     <div class="col-auto">
                         <button type="submit" class="btn btn-filter">Filter</button>
-                        <a href="homepage-kasir.php" class="btn btn-reset ml-2">Reset</a>
+                        <a href="index.php?page=dashboard-kasir" class="btn btn-reset ml-2">Reset</a>
                     </div>
                 </form>
             </div>
- 
+
             <div class="col-md-4 text-right mt-3 mt-md-0">
                 <a href="transaksi-baru.php" class="btn btn-brown">
                     <i class="fas fa-plus mr-1"></i>Input Penjualan Terbaru</a>
@@ -89,10 +80,8 @@
                 <tbody>
 
                     <?php
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
                     while ($data = $result->fetch_assoc()) {
-                        ?>
+                    ?>
 
                         <tr>
                             <td><?= htmlspecialchars($data["id_transaksi"]); ?></td>
@@ -107,19 +96,10 @@
                                 </div>
                             </td>
                         </tr>
-                        <?php
-                        }
-                    } else {
-                        ?>
-                        <tr>
-                            <td colspan="6" class="text-center font-weight-bold">
-                                Anda belum melakukan transaksi apapun.
-                            </td>
-                        </tr>
-                        <?php
+                </tbody>
+            <?php
                     }
-                    ?>
-                    </tbody>
+            ?>
             </table>
         </div>
     </div>

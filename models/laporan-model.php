@@ -35,14 +35,21 @@ class LaporanModel
         return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     }
 
-    public static function tampilLaporan($start_date = null, $end_date = null)
+    public static function tampilLaporan($start_date = null, $end_date = null, $id_user = null)
     {
         global $conn;
 
-        $where = "";
-        if (!empty($start_date) && !empty($end_date)) {
-            $where = "WHERE tgl_transaksi BETWEEN '$start_date' 
-            AND '$end_date'";
+        if (!empty($id_user)) {
+            $where = "WHERE data_transaksi.id_user = '$id_user'";
+            if (!empty($start_date) && !empty($end_date)) {
+                $where .= " AND tgl_transaksi BETWEEN '$start_date' AND '$end_date'";
+            }
+        } else {
+            $where = "";
+            if (!empty($start_date) && !empty($end_date)) {
+                $where = "WHERE tgl_transaksi BETWEEN '$start_date' 
+                AND '$end_date'";
+            }
         }
 
         $sql = "SELECT 
