@@ -21,7 +21,8 @@ class LaporanModel
         return $stmt->get_result()->fetch_assoc();
     }
 
-    public static function getByIdItem($id_transaksi) {
+    public static function getByIdItem($id_transaksi)
+    {
         global $conn;
         $stmt = $conn->prepare("SELECT 
             menu.nama_menu as menu,
@@ -38,31 +39,38 @@ class LaporanModel
     public static function tampilLaporan($start_date = null, $end_date = null, $id_user = null)
     {
         global $conn;
+        $where = [];
+        $params = [];
+        $types = "";
 
-        if (!empty($id_user)) {
-            $where = "WHERE data_transaksi.id_user = '$id_user'";
-            if (!empty($start_date) && !empty($end_date)) {
-                $where .= " AND tgl_transaksi BETWEEN '$start_date' AND '$end_date'";
-            }
-        } else {
-            $where = "";
-            if (!empty($start_date) && !empty($end_date)) {
-                $where = "WHERE tgl_transaksi BETWEEN '$start_date' 
-                AND '$end_date'";
-            }
+        if ($start_date && $end_date) {
+            $where[] = "data_transaksi.tgl_transaksi BETWEEN ? AND ?";
+            $params[] = $start_date;
+            $params[] = $end_date;
+            $types .= "ss";
+        }
+        if ($id_user) {
+            $where[] = "data_transaksi.id_user = ?";
+            $params[] = $id_user;
+            $types .= "i";
         }
 
-        $sql = "SELECT 
-                data_transaksi.id_transaksi, 
-                data_transaksi.total_harga, 
-                data_transaksi.bayar,
-                data_transaksi.kembali,
-                data_transaksi.tgl_transaksi, 
-                user.username as kasir
-            FROM data_transaksi
-            INNER JOIN user ON data_transaksi.id_user = user.id_user
-            $where ORDER BY tgl_transaksi DESC";
+        $whereSql = $where ? "WHERE " . implode(" AND ", $where) : "";
+        $stmt = $conn->prepare("SELECT 
+        data_transaksi.id_transaksi,
+        data_transaksi.total_harga,
+        data_transaksi.bayar,
+        data_transaksi.kembali,
+        data_transaksi.tgl_transaksi,
+        user.username AS kasir
+        FROM data_transaksi 
+        INNER JOIN user ON data_transaksi.id_user = user.id_user
+        $whereSql ORDER BY data_transaksi.tgl_transaksi DESC");
 
-        return $conn->query($sql);
+        if (!empty($params)) {
+            $stmt->bind_param($types, ...$params);
+        }
+        $stmt->execute();
+        return $stmt->get_result();
     }
 }
