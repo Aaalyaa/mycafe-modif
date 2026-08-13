@@ -20,6 +20,10 @@ switch ($page) {
         require_once 'controllers/laporan-controller.php';
         LaporanController::getHistoriKasir();
         break;
+    
+    case 'detail-kasir':
+        require 'views/kasir/detail_transaksi_kasir.php';
+        break;
 
     case 'owner-akun':
         require 'views/owner/akun.php';

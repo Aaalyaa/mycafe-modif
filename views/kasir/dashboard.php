@@ -91,7 +91,7 @@ $role = $_SESSION['peran'] ?? 'User';
                             <td>Rp <?= number_format($data["kembali"], 0, ',', thousands_separator: '.'); ?>,-</td>
                             <td class="action-buttons">
                                 <div class="btn-actions"><a
-                                        href="fungsi/lihat/detail_transaksi_kasir.php?id_transaksi=<?php echo $data["id_transaksi"]; ?>"
+                                        href="index.php?page=detail-kasir&id_transaksi=<?php echo $data["id_transaksi"]; ?>"
                                         class="btn btn-detail">Detail</a>
                                 </div>
                             </td>

@@ -1,6 +1,6 @@
 <?php
-include "../../config.php";
-include "../../auth.php";
+include "includes/config.php";
+include "includes/auth.php";
 $id_transaksi = $_GET["id_transaksi"];
 $query = "SELECT 
         data_transaksi.id_transaksi, 
@@ -26,7 +26,7 @@ $role = $_SESSION['peran'] ?? 'User';
     <title>Detail Transaksi</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/style-detail.css">
+    <link rel="stylesheet" href="css/style-detail.css">
 </head>
 
 <body>
@@ -35,16 +35,16 @@ $role = $_SESSION['peran'] ?? 'User';
             <?php echo $tanggal . " | " . $nama . " (" . $role . ")"; ?>
         </div>
         <div class="navbar-right">
-            <a href="../../kasir-akun.php" class="btn btn-akun">Lihat Informasi Akun</a>
-            <a href="../../logout.php" class="btn btn-logout"
+            <a href="index.php?page=kasir-akun" class="btn btn-akun">Lihat Informasi Akun</a>
+            <a href="index.php?page=logout" class="btn btn-logout"
                 onclick="return confirm('Apakah kamu yakin ingin keluar dari website?')">Logout</a>
         </div>
     </nav>
 
     <div class="container mt-3">
         <h2>Detail Transaksi</h2>
-        <a href="../../homepage-kasir.php" class="btn btn-kembali mb-3">Kembali</a>
-        <a href="../../cetak_struk.php?id_transaksi=<?= $data_1['id_transaksi']; ?>" class="btn btn-struk mb-3"
+        <a href="index.php?page=dashboard-kasir" class="btn btn-kembali mb-3">Kembali</a>
+        <a href="views/struk/cetak_struk.php?id_transaksi=<?= $data_1['id_transaksi']; ?>" class="btn btn-struk mb-3"
             target="_blank">Cetak Struk</a>
 
         <div class="card mb-4 card-transaksi-header">
