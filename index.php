@@ -22,7 +22,7 @@ switch ($page) {
         break;
     
     case 'detail-kasir':
-        require 'views/kasir/detail_transaksi_kasir.php';
+        require 'views/kasir/detail-transaksi-kasir.php';
         break;
 
     case 'owner-akun':
